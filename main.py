@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument('--dataset_type', type=str, default='CelebA', help='datasetA_type')
     parser.add_argument('--dataset_img_type', type=str, default='jpg', help='datasetA_image_type')
 #    parser.add_argument('--datasetA_path', type=str, default='/media/siat-x/D896F32696F303B2/Datas/CelebA/CelebAMask-HQ/', help='datasetA_path')
-    parser.add_argument('--dataset_path', type=str, default='/home/yya/Datas/CelebA/', help='datasetA_path')
+    parser.add_argument('--dataset_path', type=str, default='./CelebA/', help='datasetA_path')
     parser.add_argument('--label_size', type=int, default=8, help='label_size')
 
     parser.add_argument('--epoch', type=int, default=20, help='The number of epochs to run')
