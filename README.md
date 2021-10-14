@@ -39,4 +39,4 @@ Paper URL is coming
 
 ## Pretrained model
 
-- Download checkpoint for [128x128](https://pan.baidu.com/s/10FHomVjkceuh0kJXIQsb9w)cbx6
+- Download checkpoint for [128x128](https://pan.baidu.com/s/10FHomVjkceuh0kJXIQsb9w)(cbx6)
