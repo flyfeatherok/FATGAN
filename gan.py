@@ -92,8 +92,8 @@ class GAN:
 
 
             # Bottle-neck
-            mu, sigma = self.MLP(c, channel, scope='MLP_resblock'+str(i))
             for i in range(self.resn) :
+                mu, sigma = self.MLP(c, channel, scope='MLP_resblock'+str(i))
                 x = adaptive_resblock(x, channel, mu, sigma, scope='adaptive_resblock'+str(i))
 
             # Up-Sampling
@@ -146,8 +146,9 @@ class GAN:
                 
             x = self_attention(x, use_bias=True, sn=self.sn, scope='self_attention')
 
+            channel = channel * 2
             for i in range(self.disn//2, self.disn) :
-                channel = channel * 2
+                # channel = channel * 2 if channel<1024 else 1024
                 if self.scconv:
                     x = scconv(x, use_bias=False, sn=self.sn, scope='scconv'+str(i))
                 x = conv(x, channel, kernel=4, stride=2, pad=1, sn=self.sn, scope='conv_'+str(i))
